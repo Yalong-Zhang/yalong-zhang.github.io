@@ -7,6 +7,28 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+#one p {
+	font-size: 20px;
+}
+
+#two p {
+	font-size: 20px;
+	counter-increment: paragraph-counter; /* 增加计数器 */
+    position: relative; /* 确保计数器数字可以被正确定位 */
+    padding-left: 30px; /* 为计数器数字留出空间 */
+}
+
+#two p::before {
+    content: counter(paragraph-counter) ". "; /* 插入计数器值和一个点 */
+    position: absolute; /* 绝对定位计数器数字 */
+    left: 0; /* 设置计数器数字的位置 */
+    top: 0; /* 可以根据需要调整上下位置 */
+}
+
+#three h3 {
+	font-size: 20px;
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -98,7 +120,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #a2a2a2;
+		color: #878787;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
@@ -121,9 +143,15 @@ input, select, textarea {
 			text-decoration: none;
 		}
 
-	strong, b {
+	strong {
 		color: #787878;
 		font-weight: 400;
+	}
+
+	b {
+		color: #787878;
+		font-weight: 400;
+		text-decoration: underline;
 	}
 
 	em, i {
@@ -135,7 +163,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #787878;
+		color: #575757;
 		font-weight: 400;
 		line-height: 1em;
 		margin: 0 0 1em 0;
@@ -297,6 +325,7 @@ input, select, textarea {
 		flex-wrap: wrap;
 		box-sizing: border-box;
 		align-items: stretch;
+		text-align: center;
 	}
 
 		.row > * {
@@ -2135,6 +2164,7 @@ input, select, textarea {
 
 		.image.avatar {
 			border-radius: 100%;
+			
 		}
 
 			.image.avatar:before {
@@ -2554,11 +2584,11 @@ input, select, textarea {
 /* Work Item */
 
 	.work-item {
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0;
 	}
 
 		.work-item .image {
-			margin: 0 0 1.5em 0;
+			margin: 0 0 1em 0;
 		}
 
 		.work-item h3 {
@@ -2593,10 +2623,10 @@ input, select, textarea {
 		justify-content: space-between;
 		background-color: #1f1815;
 		background-attachment: scroll,								scroll;
-		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+		background-image: url("images/overlay.png"), url("../../images/bg.png");
 		background-position: top left,							top left;
-		background-repeat: repeat,								no-repeat;
-		background-size: auto,								150%;
+		background-repeat: repeat,								repeat;
+		background-size: auto,								350%;
 		color: rgba(255, 255, 255, 0.5);
 		height: 100%;
 		left: 0;
@@ -2640,10 +2670,18 @@ input, select, textarea {
 
 		#header .image.avatar {
 			margin: 0 0 1em 0;
-			width: 6.25em;
+			width: 15em;
 		}
 
 /* Footer */
+
+	#footer a {
+		color: rgba(255, 255, 255, 0.4);
+	}
+
+	#footer p {
+		color: rgba(255, 255, 255, 0.4);
+	}
 
 	#footer .icons {
 		margin: 1em 0 0 0;
@@ -3054,8 +3092,8 @@ input, select, textarea {
 
 			#header {
 				background-attachment: scroll;
-				background-position: top left, center center;
-				background-size: auto,		cover;
+				background-position: top left, top left;
+				background-size: auto,		200%;
 				left: auto;
 				padding: 6em 4em;
 				position: relative;
