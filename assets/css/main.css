@@ -456,6 +456,10 @@ input, select, textarea {
 			width: 100%;
 		}
 
+		.row .col-12 image {
+			margin: 1em 1em 1em 1em
+		}
+
 		.row > .off-12 {
 			margin-left: 100%;
 		}
@@ -2592,14 +2596,26 @@ input, select, textarea {
 		}
 
 		.work-item h3 {
-			font-size: 1em;
+			font-size: 20px;
 			margin: 0 0 0.5em 0;
 		}
 
 		.work-item p {
-			font-size: 0.8em;
+			font-size: 15px;
 			line-height: 1.5em;
 			margin: 0;
+		}
+
+	.single-image {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center; /* Center items horizontally */
+		text-align: left; /* Align text to the left */
+	}
+
+		.single-image .image {
+			width: 50%;
 		}
 
 /* Header */
